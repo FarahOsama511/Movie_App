@@ -37,9 +37,9 @@ class _AutoscrollerState extends State<Autoscroller> {
   }
 
   void _startAutoScroll() {
-    _timer = Timer.periodic(const Duration(seconds: 3), (timer) {
+    _timer = Timer.periodic(Duration(seconds: 5), (timer) {
       if (_scrollController.hasClients) {
-        double newOffset = _scrollController.offset + 320;
+        double newOffset = _scrollController.offset + 310;
         double maxScroll = _scrollController.position.maxScrollExtent;
         _scrollController.animateTo(
           newOffset >= maxScroll ? 0 : newOffset,
@@ -70,7 +70,7 @@ class _AutoscrollerState extends State<Autoscroller> {
               itemCount: movies.length,
               itemBuilder: (context, index) {
                 return Container(
-                  width: 300,
+                  height: 300,
                   margin: const EdgeInsets.all(10),
                   child: Image.network(
                     "${movies[index].image}",

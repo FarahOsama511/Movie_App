@@ -6,7 +6,7 @@ class ApiService {
 
   Future<List<MovieModel>> getMovies() async {
     const String url = 'https://imdb-top-100-movies.p.rapidapi.com/';
-    const String apiKey = '74fd983b71mshbf1a5cb1b0f73e9p129500jsn056b2667c260';
+    const String apiKey = '5f08e56ca5mshf58ec834e4202d7p1876a6jsn0b4bae4476e';
 
     try {
       final response = await dio.get(

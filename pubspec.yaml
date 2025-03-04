@@ -36,6 +36,10 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter_native_splash: ^2.4.4
   dio: ^5.8.0+1
+  flutter_screenutil: ^5.9.3
+  url_launcher: ^6.3.1
+  youtube_player_flutter: ^9.1.1
+  webview_flutter: ^4.10.0
 
 dev_dependencies:
   flutter_test:

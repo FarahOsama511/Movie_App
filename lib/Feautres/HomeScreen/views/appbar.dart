@@ -1,5 +1,7 @@
-import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
+
+import '../../../resources/TextStyles.dart';
+import '../../SearchScreen/SearchScreen.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({super.key});
@@ -11,7 +13,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         centerTitle: true,
         title: Text(
           "The Film",
-          style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+          style: TextStyles.appBarTitle,
         ),
         leading: Icon(
           Icons.movie_creation_outlined,
@@ -23,7 +25,11 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               Icons.search,
               size: 30,
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return SearchScreen();
+              }));
+            },
           ),
         ],
       ),
