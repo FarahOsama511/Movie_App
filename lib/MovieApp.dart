@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import 'Feautres/DetailsScreen/views/Details_Screen.dart';
 import 'Feautres/splash_screen.dart';
 
 class Movieapp extends StatelessWidget {
@@ -14,13 +12,12 @@ class Movieapp extends StatelessWidget {
         minTextAdapt: true,
         splitScreenMode: true,
         child: MaterialApp(
-          theme: Theme.of(context).copyWith(
-            scaffoldBackgroundColor: Colors.black,
-            appBarTheme: const AppBarTheme(
-                backgroundColor: Colors.black, foregroundColor: Colors.white),
-          ),
-          debugShowCheckedModeBanner: false,
-          home: DetailsScreen(),
-        ));
+            theme: Theme.of(context).copyWith(
+              scaffoldBackgroundColor: Colors.black,
+              appBarTheme: const AppBarTheme(
+                  backgroundColor: Colors.black, foregroundColor: Colors.white),
+            ),
+            debugShowCheckedModeBanner: false,
+            home: SplashScreen()));
   }
 }

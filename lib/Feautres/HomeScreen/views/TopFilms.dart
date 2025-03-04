@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:movie_app/core/service/ApiService.dart';
 import 'package:movie_app/core/service/model.dart';
 
+import '../../DetailsScreen/views/Details_Screen.dart';
+
 class Topfilms extends StatefulWidget {
   const Topfilms({super.key});
 
@@ -41,8 +43,15 @@ class _TopfilmsState extends State<Topfilms> {
         itemBuilder: (context, index) {
           return Container(
             margin: const EdgeInsets.all(10),
-            child: Image.network(
-              "${TopMovies[index].image}",
+            child: InkWell(
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) =>
+                        DetailsScreen(rank: TopMovies[index].rank!)));
+              },
+              child: Image.network(
+                "${TopMovies[index].image}",
+              ),
             ),
           );
         },
